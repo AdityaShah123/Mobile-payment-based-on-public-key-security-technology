@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+                         initial-scale=1.0"
+    />
+    <title>QR Code Generator</title>
+    
+  <!-- add icon link -->
+    <link rel = "icon" href = "/Users/DELL/OneDrive/Desktop/crypto_proj/crypto_project/data/logo.png" type = "image/x-icon">
+    <!-- css file uploaded on google drive -->
+    <link rel="stylesheet" href="/Users/DELL/OneDrive/Desktop/crypto_proj/crypto_project/css/home.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="width:100%;background:#563d7c;justify-content: right;">
+  <div class="collapse navbar-collapse" id="navbarText" style="margin-left:40%;">
+    <i style="font-size: 30px;color:whitesmoke;margin-top: 4px;" class="fa">&#xf029; </i>
+    <span style="font-size: 20px;color:whitesmoke;margin-top: 2px;"> &nbsp;Generater </span>
+    <span style="font-size: 30px;color:whitesmoke;">&nbsp;|</span>
+    <i class='fas fa-grip-lines-vertical' style='font-size:36px'></i>
+    <ul class="navbar-nav">
+      <li class="nav-item active" style="margin-top: 2px;font-size: larger;">
+        <a class="nav-link" href="/Users/DELL/OneDrive/Desktop/crypto_proj/crypto_project/pages/Home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" style="margin-top: 2px;">
+        <li class="nav-item" style="margin-top: 2px;font-size: larger;">
+        <a class="nav-link" href= "/Users/DELL/OneDrive/Desktop/crypto_proj/crypto_project/pages/form.html">QRcode</i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <header class="header_st">
+      <h1 class="heading_">Online QR Code Generator</h1>
+    </header>
+    <div
+      class="card card_style"
+      style="border: 2px solid gray; border-radius: 5px">
+      <div class="card-header intro_head" style="font-size: xx-large;">
+        Instructions
+      </div>
+      <div class="card-body">
+        <h3 class="card-title" style="color: #563d7c">Hello, This is a Online QR code Generator System !</h3>
+
+        <p class="card-text">
+          <ul style="font-size: larger;font-family: Arial, Helvetica, sans-serif;">
+            <li> This website will help you to convert your personal data or contact information or event infromation into QR code, which is an encrypted data.</li>
+            <li> The user only needs to enter all the mandatory fields in the form correctly.</li>
+            <li> This system is different from the generally available system on the internet because it also takes an input of an error correction level.</li>
+            <li> The user can verify the encrypted QR code using the QR code scanner available in his/her device.</li>
+          </ul>            
+        </p>
+
+        <h3 class="card-title" style="color: #563d7c">Thank you!</h3>
+        <a href="/Users/DELL/OneDrive/Desktop/crypto_proj/crypto_project/pages/form.html" class="btn btn-info" role="button" style="background-color: #653da2;border-color:#653da2;margin-top: 10px;font-size:larger;">Create QR code</a>
+      </div>
+    </div>
+
+    <header class="header_st">
+      <h1 class="heading_">Overview of QR code</h1>
+    </header>
+
+    <div class="accordion card_style" id="accordionExample" style="margin-bottom: 40px;">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link overview_Qs" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                What is QR code? 
+            </button>
+          </h5>
+        </div>
+    
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body overview_As">
+            <ul>
+              <li>QR code can be seen as a two-dimensional bar code. QR stands for "quick response".</li>
+              <li>There 40 different versions of QR codes are available today.</li>
+              <li>Users can access the data of QR codes through QR code reader applications.
+              </li>
+            </ul>
+            
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed overview_Qs" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Why the QR codes are square shaped?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body overview_As">
+            <ul>
+              <li><b>Two-dimensional data store:</b> The square shape QR code can store data in pixels or small black boxes.(vertical and horizontal).</li>
+              <li><b>error correction feature:</b> If the QR code is very badly scratched or half of it is not available then also it can correct up to the certain limit.</li>
+              <li><b>Easy to read and access:</b> Nowadays every device with a camera is almost having QR code reader and it takes only a few seconds.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed overview_Qs" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              What is Error correction level in QR Code?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body overview_As">
+            <ul>
+              <li>Suppose, the QR code is damaged as shown in the image but it can still be decoded using a QR scanner due to its error correction section present in it.</li>
+              <li>
+                Reed–Solomon error correction is majorly used in the QR codes for error corrections. (which uses finite field of order 256).
+              </li>
+
+              <li>The following table is showing error correction capability at each of the four levels:
+                <ul>
+                  <li>Low capability(7%) means it can recovered only 7% of lost data.</li>
+                  <li>Medium capability(15%) means it can recovered only 15% of lost data.</li>
+                  <li>Quartile capability(25%) means it can recovered only 25% of lost data.</li>
+                  <li>High capability(30%) means it can recovered only 30% of lost data.</li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed overview_Qs" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Error correction capability Vs Data storage
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body overview_As">
+            <ul>
+              <li>If we want a QR code with a higher error correction level then we need to give up some amount of data that is stored in a QR code.</li>
+              <li>More codewords imply higher security and a small part of data section.</li>
+              <li>Hence, the trade-off between error correction level and data is important.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

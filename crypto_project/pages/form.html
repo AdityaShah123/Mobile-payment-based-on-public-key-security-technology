@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+                         initial-scale=1.0"
+    />
+    <title>QR Code Generator</title>
+    <!--  requiredcss for web pages -->
+    <link rel = "icon" src ="https://drive.google.com/file/d/1SPTHYWdblwqdNW_q3MJkZq0ahQnwnBeD/view?usp=share_link" 
+    type = "image/x-icon">
+    
+    <link rel="stylesheet" href="/Users/DELL/OneDrive/Desktop/crypto_proj/crypto_project/css/form.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="width:100%;background:#563d7c;justify-content: right;">
+  <div class="collapse navbar-collapse" id="navbarText" style="margin-left:40%;">
+    <i style="font-size: 30px;color:whitesmoke;margin-top: 4px;" class="fa">&#xf029; </i>
+    <span style="font-size: 20px;color:whitesmoke;margin-top: 2px;"> &nbsp;Generater </span>
+    <span style="font-size: 30px;color:whitesmoke;">&nbsp;|</span>
+    <i class='fas fa-grip-lines-vertical' style='font-size:36px'></i>
+    <ul class="navbar-nav">
+      <li class="nav-item" style="margin-top: 2px;font-size: larger;">
+        <a class="nav-link" href="/Users/DELL/OneDrive/Desktop/crypto_proj/crypto_project/pages/Home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" style="margin-top: 2px;">
+        <li class="nav-item active" style="margin-top: 2px;font-size: larger;">
+        <a class="nav-link" href="/Users/DELL/OneDrive/Desktop/crypto_proj/crypto_project/pages/form.html">QRcode</i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <h1 class="heading_">QR Code Generater</h1>
+    <div class="row card-body form-style">
+      <div class="col-5">
+        <h1 class="form-lft_head">
+          Create Your <br />
+          Dynamic <br />
+          QR Code <br />
+          <i style="font-size: 200px" class="fa">&#xf029;</i>
+        </h1>
+      </div>
+
+      <div class="col-7">
+        <main style="margin-top: 20px">
+          <form action="/" id="qr-generation-form">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email ID*</label>
+                <input
+                  type="email"
+                  name="qr-code-content"
+                  id="qr-content1"
+                  class="form-control"
+                  placeholder="xyz@gmail.com"
+                  value=""
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Name*</label>
+                <input
+                  type="text"
+                  name="qr-code-content"
+                  id="qr-content2"
+                  class="form-control"
+                  placeholder="Enter Your Full Name"
+                  value=""
+                  autocomplete="off"
+                  maxlength="50"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Title of the Message*</label>
+              <input
+                type="text"
+                name="qr-code-content"
+                id="qr-content3"
+                class="form-control"
+                id="inputAddress"
+                placeholder="Enter brief title"
+                value=""
+                autocomplete="off"
+                maxlength="30"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Message*</label>
+              <textarea
+                row="10"
+                name="qr-code-content"
+                id="qr-content4"
+                col="10"
+                type="text"
+                class="form-control"
+                id="inputAddress2"
+                placeholder="Enter full Message"
+                value=""
+                autocomplete="off"
+                maxlength="4000"
+                required
+              ></textarea>
+            </div>
+            <p>Select Error Correction Level*:</p>
+            <div class="form-group">
+              <input type="radio" name="size" value="L" id="l" />
+              <label for="L">Low</label>
+              &nbsp;
+              <input type="radio" name="size" value="M" id="m" />
+              <label for="m">Medium</label>
+              &nbsp;
+              <input type="radio" name="size" value="Q" id="q" />
+              <label for="q">Quartile</label>
+              &nbsp;
+              <input type="radio" name="size" value="H" id="h" />
+              <label for="h">High</label>
+            </div>
+            <p>(*)are mandatory fields</p>
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value="Generate QR Code"
+              onclick="displayRadioValue()"
+              id="#btn"
+              style="
+                background-color: #563d7c;
+                border-color: #563d7c;
+                margin-top: 10px;
+              "
+            />
+          </form>
+          <br />
+          <div id="qr-code"></div>
+        </main>
+      </div>
+    </div>
+    <script>
+      let qrContentInput_1 = document.getElementById("qr-content1");
+      let qrContentInput_2 = document.getElementById("qr-content2");
+      let qrContentInput_3 = document.getElementById("qr-content3");
+      let qrContentInput_4 = document.getElementById("qr-content4");
+      let qrGenerationForm = document.getElementById("qr-generation-form");
+
+      let qrCode;
+      let sq;
+      function displayRadioValue() {
+        var ele = document.getElementsByName("size");
+        for (i = 0; i < ele.length; i++) {
+          if ((ele[i].type = "radio")) {
+            if (ele[i].checked) sq = ele[i].value;
+          }
+        }
+      }
+
+      function generateQrCodeL(qrContent) {
+        return new QRCode("qr-code", {
+          text: qrContent,
+          width: 256,
+          height: 256,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.L,
+        });
+      }
+
+      function generateQrCodeM(qrContent) {
+        return new QRCode("qr-code", {
+          text: qrContent,
+          width: 256,
+          height: 256,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.M,
+        });
+      }
+      function generateQrCodeQ(qrContent) {
+        return new QRCode("qr-code", {
+          text: qrContent,
+          width: 256,
+          height: 256,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.Q,
+        });
+      }
+      function generateQrCodeH(qrContent) {
+        return new QRCode("qr-code", {
+          text: qrContent,
+          width: 256,
+          height: 256,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H,
+        });
+      }
+      // Event listener for form submit event
+      qrGenerationForm.addEventListener("submit", function (event) {
+        // Prevent form submission
+        event.preventDefault();
+        let qrContent_1 = qrContentInput_1.value;
+        let qrContent_2 = qrContentInput_2.value;
+        let qrContent_3 = qrContentInput_3.value;
+        let qrContent_4 = qrContentInput_4.value;
+        let qrContent =
+          "Email : " +
+          qrContent_1 +
+          "\n" +
+          "Name : " +
+          qrContent_2 +
+          "\n" +
+          "Title :" +
+          qrContent_3 +
+          "\n" +
+          "Message : \n" +
+          qrContent_4;
+
+        $("#qr-code").empty();
+        if (sq == "L") {
+          // Generate code initially
+          qrCode = generateQrCodeL(qrContent);
+        } else if (sq == "M") {
+          // Generate code initially
+          qrCode.qrCode = generateQrCodeM(qrContent);
+        } else if (sq == "Q") {
+          // Generate code initially
+          qrCode = generateQrCodeQ(qrContent);
+        } else if (sq == "H") {
+          // Generate code initially
+          qrCode = generateQrCodeH(qrContent);
+        }
+      });
+    </script>
+  </body>
+</html>

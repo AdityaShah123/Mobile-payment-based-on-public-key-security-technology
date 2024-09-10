@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(245, 245, 245); */
+  background-color: white;
+}
+
+.heading_ {
+  color: #563d7c;
+  font-size: xx-large;
+  margin-block-start: 1.4em;
+  margin-block-end: 0em;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+}
+
+.header_st {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_style {
+  width: 70%;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.form-style {
+  background-color: rgba(0, 0, 0, 0.02);
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  height: 850px;
+}
+
+.form-lft_head {
+  margin-top: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  color: #563d7c;
+}
